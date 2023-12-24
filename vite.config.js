@@ -1,4 +1,4 @@
 // vite.config.js
 export default {
-    base: '/'
+    base: '/aliibaker.github.io/'
   }
