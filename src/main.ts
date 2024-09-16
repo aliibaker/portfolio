@@ -1,10 +1,10 @@
 import './style.css'
 
 
-enum PageState {
-    INDEX = 0,
-    ABOUT = 1, 
-}
+// enum PageState {
+//     INDEX = 0,
+//     ABOUT = 1, 
+// }
 
 function blogs() {
     return(
@@ -73,10 +73,6 @@ function index() {
             ${blogs()}
         </div>
     `
-}
-
-function pageView() {
-    
 }
 
 function renderPage() {
