@@ -1,6 +1,7 @@
 import './style.css'
+import { Router } from './router';
 
-
+import { ditherView } from './blogs/dither';
 // enum PageState {
 //     INDEX = 0,
 //     ABOUT = 1, 
@@ -16,7 +17,7 @@ function blogs() {
                         Will typically lean towards topics within the realm of graphics and compiler engineering. 
                     </p>
                     <div class="blog">
-                        <h4> Dither (coming 22/09/2024) </h4>
+                        <h4> Dither (coming 25/09/2024)</h4>
                         <p> Technical, artistic, historic. A post processing technique that has seen use across pragmatic
                             and creative contexts. In this blogpost, I'll explore the history, math, and application of 
                             a dither shader. 
@@ -75,15 +76,11 @@ function index() {
     `
 }
 
-function renderPage() {
-    const root = document.getElementById('root');
+const routes = [
+    {path: '/', view: index},
+    {path: '/blogs/dither', view: ditherView}
+]
 
-    if(!root){
-        return;
-    }
+const router = new Router(routes);
 
-    console.log('hello');
-    root.innerHTML = index();
-}
-
-renderPage();
+router.init();
