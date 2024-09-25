@@ -17,25 +17,10 @@ function blogs() {
                         Will typically lean towards topics within the realm of graphics and compiler engineering. 
                     </p>
                     <div class="blog">
-                        <h4> Dither (coming 25/09/2024)</h4>
+                        <h4> Dither (tbd sorry got busy)</h4>
                         <p> Technical, artistic, historic. A post processing technique that has seen use across pragmatic
                             and creative contexts. In this blogpost, I'll explore the history, math, and application of 
                             a dither shader. 
-                        </p>
-                    </div>
-                    <div class="blog">
-                        <h4> Understanding color (coming 06/10/2024) </h4>
-                        <p>  Color is everywhere. In a very visual world, it occupies so much
-                             of our daily life. This blog explores how we represent color
-                             in the world of computation and also dives into the role of color
-                             in the realm of graphics rendering. 
-                        </p>
-                    </div>
-                    <div class="blog">
-                        <h4> Conway (tbd) </h4>
-                        <p>
-                            A focus on the work of a revered mathematician and 
-                            how he accidently pioneered a genre of digital art.
                         </p>
                     </div>
                 </div>
