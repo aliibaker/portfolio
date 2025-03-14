@@ -2,6 +2,7 @@ import './style.css'
 import { Router } from './router';
 
 import { ditherView } from './blogs/dither';
+import { birthdayView } from './misc/birthday';
 // enum PageState {
 //     INDEX = 0,
 //     ABOUT = 1, 
@@ -63,6 +64,7 @@ function index() {
 
 const routes = [
     {path: '/', view: index},
+    {path: '/birthday', view: birthdayView},
     {path: '/blogs/dither', view: ditherView}
 ]
 
