@@ -17,7 +17,7 @@ function about() {
                 </p>
 
                 <p>
-                    Exploring real time rendering, intermediate representation, tools for creation.
+                    Exploring real time rendering, compilers, tools for creation.
                 </p>
                 </div>
 
