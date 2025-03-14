@@ -3,7 +3,7 @@ type Route = {
     view: () => string;
 }
 
-/** My simple custom router. */
+/** Hash-based router for GitHub Pages. */
 export class Router {
     private routes: Route[];
 
@@ -11,9 +11,17 @@ export class Router {
         this.routes = routes;
     }
 
-
     loadRoute(url: string) {
-        const route = this.routes.find(route => route.path === url);
+        // Remove leading slash if present for consistency
+        if (url.startsWith('/')) {
+            url = url.substring(1);
+        }
+        
+        const route = this.routes.find(route => {
+            // Also normalize route paths by removing leading slashes
+            const routePath = route.path.startsWith('/') ? route.path.substring(1) : route.path;
+            return routePath === url;
+        });
 
         if(route) {
             document.getElementById('root')!.innerHTML = route.view();
@@ -23,10 +31,14 @@ export class Router {
     }
 
     init() {
-        window.addEventListener('popstate', () => {
-            this.loadRoute(window.location.pathname);
+        // Handle hash changes
+        window.addEventListener('hashchange', () => {
+            // Get the path from the hash without the leading #
+            const hash = window.location.hash.substring(1);
+            this.loadRoute(hash);
         });
 
+        // Handle click events on links
         document.body.addEventListener('click', (e: MouseEvent) => {
             if (e.target instanceof HTMLAnchorElement) {
                 const href = e.target.getAttribute('href');
@@ -41,12 +53,25 @@ export class Router {
                 
                 // Handle internal links with router
                 e.preventDefault();
-                history.pushState(null, '', href);
-                this.loadRoute(href);
+                
+                // Update the hash to trigger navigation
+                // Remove leading slash for hash consistency
+                const hashPath = href.startsWith('/') ? href.substring(1) : href;
+                window.location.hash = hashPath;
+                
+                // No need to call loadRoute directly as the hashchange event will handle it
             }
         });
 
-        this.loadRoute(window.location.pathname);
+        // Initial route handling - use hash if present, otherwise default to home
+        if (window.location.hash) {
+            // Use the hash path without the # symbol
+            this.loadRoute(window.location.hash.substring(1));
+        } else {
+            // Set initial hash to current path or default to home
+            const initialPath = window.location.pathname === '/' ? '' : window.location.pathname;
+            window.location.hash = initialPath;
+        }
     }
 
     // Helper method to determine if a URL is external
