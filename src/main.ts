@@ -3,31 +3,6 @@ import { Router } from './router';
 
 import { ditherView } from './blogs/dither';
 import { birthdayView } from './misc/birthday';
-// enum PageState {
-//     INDEX = 0,
-//     ABOUT = 1, 
-// }
-
-function blogs() {
-    return(
-    `
-        <div class="content">
-            <h2 class="content-title"> blogs </h2>
-            <div class="blogs">
-                    <p> Interactive technical writeups and analysis of topics I'm interested in. 
-                        Will typically lean towards topics within the realm of graphics and compiler engineering. 
-                    </p>
-                    <div class="blog">
-                        <h4> Dither (tbd sorry got busy)</h4>
-                        <p> Technical, artistic, historic. A post processing technique that has seen use across pragmatic
-                            and creative contexts. In this blogpost, I'll explore the history, math, and application of 
-                            a dither shader. 
-                        </p>
-                    </div>
-                </div>
-        </div>
-    `);
-}
 
 function about() {
     return `<div class="content">
