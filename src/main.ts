@@ -29,7 +29,6 @@ function header() {
 }
 function index() {
     return `
-        
         <div class="page"> 
             ${header()}
         </div>

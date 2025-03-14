@@ -71,7 +71,7 @@ export class Router {
             // Default to home route with empty hash
             window.location.hash = '';
             // Explicitly load the home route since the hashchange event won't fire
-            this.loadRoute('');
+            this.loadRoute('/');
         }
     }
 
