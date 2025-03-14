@@ -68,9 +68,10 @@ export class Router {
             // Use the hash path without the # symbol
             this.loadRoute(window.location.hash.substring(1));
         } else {
-            // Set initial hash to current path or default to home
-            const initialPath = window.location.pathname === '/' ? '' : window.location.pathname;
-            window.location.hash = initialPath;
+            // Default to home route with empty hash
+            window.location.hash = '';
+            // Explicitly load the home route since the hashchange event won't fire
+            this.loadRoute('');
         }
     }
 
