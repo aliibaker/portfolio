@@ -57,7 +57,6 @@ function index() {
         
         <div class="page"> 
             ${header()}
-            ${blogs()}
         </div>
     `
 }
