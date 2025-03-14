@@ -86,6 +86,10 @@ p {
     color: rgb(207, 199, 199);
   }
 
+  a {
+    color: rgb(207, 199, 199);
+  }
+
   .page {
     color: rgb(207, 199, 199);
   }
@@ -100,6 +104,10 @@ p {
 @media (prefers-color-scheme: light) {
   body{
     background-color: rgb(207, 199, 199);
+    color: rgb(29, 27, 27);
+  }
+
+  a {
     color: rgb(29, 27, 27);
   }
 
