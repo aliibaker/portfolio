@@ -3,7 +3,7 @@ export function birthdayView() {
             <div class="message-container">
             <div class="message"> 
                 Hosting a gathering for my 25th birthday on Saturday March 15th at
-                <a href="https://maps.app.goo.gl/vHS4SnQ9FRUZeyE76" target="_blank">Dolores park</a> starting at 1:30pm. We will be at the flat area of the park,
+                <a href="https://maps.app.goo.gl/vHS4SnQ9FRUZeyE76" target="_blank">Dolores park</a> starting at 2:30pm. We will be at the flat area of the park,
                 near the tennis courts. Please contact me if you need more
                 specific directions on the day.
                 
